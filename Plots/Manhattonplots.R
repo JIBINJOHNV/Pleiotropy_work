@@ -18,18 +18,20 @@ all2$PHE<-"ALL"
 colnames(all)<-c("CHR","BP","SNP","ALL") 
 
 dis<-fread("FUMA_INPUT_withoutMHC_Discordant.txt")
+colnames(dis)<-c("CHR", "BP","REF","ALT","P","SNP")
 dis<-dis[, c("CHR","BP","SNP","P") ]
 dis2<-dis[, c("CHR","BP","SNP","P") ]
 dis2$PHE<-"DIS"
 colnames(dis)<-c("CHR","BP","SNP","DIS") 
 
 con<-fread("FUMA_INPUT_withoutMHC_Concordant.txt")
+colnames(con)<-c("CHR", "BP","REF","ALT","P","SNP")
 con<-con[, c("CHR","BP","SNP","P") ]
 con2<-con[, c("CHR","BP","SNP","P") ]
 con2$PHE<-"CON"
 colnames(con)<-c("CHR","BP","SNP","CON") 
 
-both<-fread("FUMA_INPUT_withoutMHC_Both.txt.gz")
+both<-fread("both<-fread("/home/jjohn41/Analysis/MetaAnalysis/Analysis/Recent_SCZ_COG_EDU/Magma_Analysis/Magma_Inputs/FUMA/FUMA_INPUT_withoutMHC_Both.txt.gz")
 both<-both[, c("CHROM","POS","SNP","PLEIO_META_PLEIO_P") ]
 both2<-both[, c("CHROM","POS","SNP","PLEIO_META_PLEIO_P") ]
 colnames(both2)<-c("CHR","BP","SNP","P") 
